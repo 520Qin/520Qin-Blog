@@ -5,9 +5,9 @@
     <title>首页</title>
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script scr="Public/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="Public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="Public/css/index.css" />
+    <script scr="../Public/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Public/css/index.css" />
 
 </head>
 <body>
@@ -82,7 +82,7 @@
                         
                         <div class="post-content">
                             <p>
-                                <img class="img-responsive" src="./Public/images/upload/2016-04-16_182059.png" alt="">
+                                <img class="img-responsive" src="./../Public/images/upload/2016-04-16_182059.png" alt="">
                             </p>
                         </div>
 
@@ -103,25 +103,20 @@
                     <article class="post">
                         <div class="title-div">
                             <h2>
-                                <a href="">个人简介</a>
+                                <a href="">新闻图片</a>
                             </h2>
                             
                         </div>
 
-                        <p style="margin:auto 10px">
-                            
-                            　　一不留神，角色已转变。
-                            为了前程，终究还是离开了神仙般轻松快乐的日子，去寻找属于自己的小工作，陪伴一群即将认识的朋友创造未来，简单而不平凡。<br>
-                            　　闲暇时做些吃食以慰饥腹与心灵，一样充满热情地生活，一样坚信世上有的是真爱;一样以为做饭和活着一样，不为取悦谁，自己体会乐趣，自己享受成就，自己开心就好！
-                        </p><br>
+                        
 
-                        <div align="center">
-                            <img style="width:600px" src="Public/images/person.jpg" />
-                        </div>
+                        <div id="image"></div>
+
+
                         <footer class="post-footer clearfix">
                             <div class="pull-left tag-list">
                                 <i class="fa fa-folder-open-o"></i>
-                                <!-- <a href="/tag/xin-ban-ben-fa-bu/" id="title"></a> -->
+                                <a href="/tag/xin-ban-ben-fa-bu/" id="title"></a>
                             </div>
                             <div class="pull-right share">
                             </div>
@@ -130,7 +125,7 @@
 
 
                     
-                    <!-- <nav class="pagination" role="navigation">
+                    <nav class="pagination" role="navigation">
                         <a class="newer-posts" href="/">
                             <i class="fa fa-angle-left">&lt;</i>
                         </a>
@@ -138,26 +133,10 @@
                         <a class="older-posts" href="./index.html">
                             <i class="fa fa-angle-right">&gt;</i>
                         </a>
-                    </nav> -->
+                    </nav>
                 </div>
     <!-- 右边1 -->
                 <aside class="col-md-3 hidden-sm hidden-xs mainRight ">
-                    <div class="widget">
-                        <div class="aside">
-                            <h4>个人简介</h4>
-                        </div>
-                        <div class="content">
-                            
-                            <p>
-                                <img style="width:150px" src="Public/images/default.jpg" />
-                            </p>
-
-                            <p>
-                                姓名 : D.Ronde
-                            </p>
-                            
-                        </div>
-                    </div>
                     <div class="widget">
                         <div class="aside">
                             <h4>近期文章</h4>
@@ -165,25 +144,21 @@
                         <div class="content">
                             <p>
                                 <a href="./html/addgit.html">
-                                    如何在Github搭建自己的个人博客
-                                </a>
-                            </p>
-
-                            <p>
-                                <a href="./html/news.html">
-                                    新闻内容
+                               如何在Github搭建自己的个人博客
                                 </a>
                             </p>
                             
                         </div>
                     </div>
+
+                    
                 </aside>
 
             </div>
         </section>
-    <script src="./Public/js/jquery.js"></script>
+    <script src="./../Public/js/jquery.js"></script>
   
-    <script src="./Public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./../Public/bootstrap/js/bootstrap.min.js"></script>
 
     <script>
       $('.noContent').click(function(){
@@ -202,7 +177,7 @@
         $.ajax({
             type: "get",
             // dataType:"json",
-            url: "php/action.php",
+            url: "../php/action.php",
             data: "id=1",
             success: function(res){
                 //alert(msg);
@@ -225,7 +200,7 @@
             $.ajax({
                 type: "get",
                 // dataType:"json",
-                url: "php/action.php",
+                url: "../php/action.php",
                 data: "id=2",
                 success: function(res){
                     //alert(msg);  

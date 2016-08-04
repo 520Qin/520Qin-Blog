@@ -13,8 +13,8 @@ a:hover{
 	text-decoration: none;
 }
 .btn-default {
-    border: 1px solid #f4645f;
-    background: #f4645f;
+    border: 1px solid #5E9EFF;
+    background: #5E9EFF;
     color: #ffffff;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -106,7 +106,7 @@ section .mainRight div.aside{
 	border-bottom:;
 }
 section .mainRight div.aside h4{
-	 border-bottom: 2px solid #FF675E;
+	 border-bottom: 2px solid #5E9EFF;
 }
 
    
@@ -127,11 +127,11 @@ section .mainRight div.widget{
     text-align: center;
     display: inline-block;
     color: #ffffff;
-    background: #f4645f;
+    background: #5E9EFF;
     border-radius: 2px;
 }
 .pagination .page-number {
-    background: #f4645f;
+    background: #5E9EFF;
     color: #ffffff;
     margin: 0 3px;
     display: inline-block;

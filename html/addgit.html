@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script scr="../../Public/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Public/css/index.css" />
+
+</head>
+<body>
+<!-- 头部 -->
+
+
+<header class="container-fluid">
+        <div class="container">
+            <div class="col-md-8 col-xs-12 col-sm-8 title">
+                <h1>D.Ronde 的博客</h1>
+            </div>
+
+            <div class="searchBox col-md-3 col-xs-12">
+                <form class="form-line">
+                    <h2>
+                        <input type="search" class="form-control" name="search" placeholder="输入内容后回车搜索"/>
+                    </h2>
+
+                </form>
+            </div>
+        </div>
+</header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid" id="nav">
+		  	<div class="row">
+		  		<div class="container">
+		  			<div class="col-md-12 col-xs-12 col-sm-12">
+		 					<!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHidden" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						    
+						    </div>
+
+				    		<!-- Collect the nav links, forms, and other content for toggling -->
+						    <div class="collapse navbar-collapse" id="navHidden">
+
+						      <ul class="nav navbar-nav">
+						        <li class="active">
+						        	<a href="../index.html">首页 <span class="sr-only">(current)</span></a></li>
+						        <li><a href="#">PHP</a></li>
+                    <li><a href="#">微信开发</a></li>
+                    <li><a href="#">Linux</a></li>
+						        <li><a href="#">Git</a></li>
+						        <li><a href="#">JavaScript</a></li>
+						        <li><a href="#">Node.JS</a></li>
+                    <li><a href="#">CSS</a></li>
+						      
+						      </ul>
+
+						    </div><!-- /.navbar-collapse -->
+					  </div><!-- /.container-fluid -->
+		  			</div>
+		  		</div>
+		  	</div>
+		   
+		</nav>
+
+		<!--主体部分-->
+		<section class="container-fluid">
+			<div class="container">
+
+				<div class="col-md-8 mainLeft">
+
+                    <article class="post">
+                        <div class="title-div">
+                            <h2>
+                                <a href="">如何在Github搭建自己的个人博客</a>
+                            </h2>
+                            <div>
+                                作者：梁芝 • 2016年5月30日
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                           
+                           <p>第一步：在github网站创建你的账号
+                                </p><pre>网址:http://www.github.com</pre>
+                           <p></p>
+
+                           <p>第二步：新建一个仓库
+                                </p><p>点击右上角的+号，然后点击New repository</p>
+                                <img src="../Public\images/2016-05-30_143356.png">
+
+                           <p></p>
+
+                            <p>
+
+                                <img class="img-responsive" src="../Public\images/2016-05-30_143730.png">
+                                </p><h4>点击Create repository按钮就可以新建一个仓库</h4>
+                            <p></p>   
+                            <hr>
+                            <p>
+                                </p><h4>接下来就是出现这个页面了。</h4>
+                                <img class="img-responsive" src="../Public\images/2016-05-30_144045.png">
+                            <p></p> 
+                           
+
+                           <p>
+                             第三步：创建gh-pages分支
+                             </p><p>
+                                <img class="img-responsive" src="../Public\images/2016-05-30_144558.png">
+                             </p>
+                             输入正确后，直接回车键保存。到此为止，gh-pages分支就创建完成。并且我们的基于github的个人博客也完成了。
+                           <p></p>
+                           <p style="color:red">
+                                注：我们只需要往gh-pages分支提交我们的静态代码就可以了。
+                           </p>
+
+                           <p>
+                                以下是将github网站仓库的代码克隆到我们自己的电脑的过程：
+                           </p>
+                           <p>
+                                <span style="color:red">1. 克隆你的项目(如果是Window系统，建议下载Git Bash这个软件，以下命令都是在Git Bash中输入的)
+                                </span>
+                                    </p><pre>git clone URL</pre>
+
+                                2. 将gh-page远程分支检出
+                                       <pre>git checkout --track origin/gh-pages</pre>
+
+                                3. 写你的代码
+                                <br>
+                                <br>
+
+                                4. 添加刚刚写的代码
+                                    <pre>git add .</pre>
+
+                                5. 提交代码到本地仓库
+                                    <pre>git commit -m '提交的时候写些注释'</pre>
+
+
+                                6. 将第三步写的代码，提交到gh-pages分支
+                                    
+                                    <pre>git push origin gh-pages</pre>
+                           <p></p>
+                        </div>
+
+                        <footer class="post-footer clearfix">
+                            <div class="pull-left tag-list">
+                                <i class="fa fa-folder-open-o"></i>
+                                <a href="http://xuanhaoguo.com/tag/lumen/">如何在Github搭建自己的个人博客</a>,
+                            </div>
+                            <div class="pull-right share">
+                            </div>
+                        </footer>
+                    </article>
+					
+				
+				</div>
+				<aside class="col-md-3 hidden-sm hidden-xs mainRight ">
+					<div class="widget">
+						<div class="aside">
+							<h4>近期文章</h4>
+						</div>
+						<div class="content">
+							<p>
+								<a href="#">
+									如何在Github搭建自己的个人博客
+								</a>
+								
+							</p>
+							<p>
+								<a href="">
+									从HTTP协议角度看GET与POST请求的区别
+								</a>
+								
+							</p>
+						</div>
+					</div>
+
+
+				</aside>
+			</div>
+
+		</section>
+
+   
+    <script src="../Public\images/jquery.js"></script>
+  
+    <script src="../Public\images/bootstrap.js"></script>
+  
+
+</body></html>
