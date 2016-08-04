@@ -1,5 +1,6 @@
 <?php
     $id = $_GET['id'];
+    
     switch($id){
         case 1:
             $ch = curl_init();
