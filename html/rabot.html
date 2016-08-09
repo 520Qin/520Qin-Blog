@@ -192,7 +192,7 @@
             type: "get",
             dataType:"json",
             url: "../php/action.php",
-            data: "id=1",
+            data: {id:"1"},
             success: function(msg){
                 //alert(msg);
                 //var msg = eval('('+res+')');
@@ -224,7 +224,7 @@
                 type: "get",
                 dataType:"json",
                 url: "../php/rabot.php",
-                data: "name="+name+"&info="+info,
+                data:{ name:name,info:info},
                 success: function(msg){
                     //alert(msg);
                     // var msg = eval('('+res+')');
