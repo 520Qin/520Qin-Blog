@@ -5,9 +5,9 @@
     <title>首页</title>
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script scr="Public/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="Public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="Public/css/index.css" />
+    <script scr="../Public/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Public/css/index.css" />
 
 </head>
 <body>
@@ -77,68 +77,53 @@
 <section class="container-fluid">
             <div class="container">
 
-                <div class="col-md-8 mainLeft">
-                   <!--  <article class="post">
-                        
-                        <div class="post-content">
-                            <p>
-                                <img class="img-responsive" src="./Public/images/upload/2016-04-16_182059.png" alt="">
-                            </p>
-                        </div>
-
-                        <div class="readFull">
-                            <a href="/post/lumen-5-2-is-released/" class="btn btn-default">阅读全文</a>
-                        </div>
-
-                        <footer class="post-footer clearfix">
-                            <div class="pull-left tag-list">
-                                <i class="fa fa-folder-open-o"></i>
-                                <a href="/tag/lumen/">jQuery</a>, <a href="/tag/xin-ban-ben-fa-bu/">jQuery的prop()方法与attr()区别</a>
-                            </div>
-                            <div class="pull-right share">
-                            </div>
-                        </footer>
-                    </article> -->
-
+                <div class="col-md-8 mainLeft" align="center">
+                   
                     <article class="post">
                         <div class="title-div">
                             <h2>
-                                <a href="">个人简介</a>
+                                <a href="">图灵机器人</a>
                             </h2>
                             
                         </div>
-                        
-                        <p style="margin:auto 10px">
-                            
-                            　　一不留神，角色已转变。
-                            为了前程，终究还是离开了神仙般轻松快乐的日子，去寻找属于自己的小工作，陪伴一群即将认识的朋友创造未来，简单而不平凡。<br>
-                            　　闲暇时做些吃食以慰饥腹与心灵，一样充满热情地生活，一样坚信世上有的是真爱;一样以为做饭和活着一样，不为取悦谁，自己体会乐趣，自己享受成就，自己开心就好！
-                        </p><br>
+                        <div style="margin-bottom:3px">
+                            <button class="btn btn-default" onclick="xin('ding')">ding</button>
+                            <button class="btn btn-default" onclick="xin('qin')">qin</button>
 
-                        <div align="center">
-                            <img style="width:70%" src="Public/images/person.jpg" />
                         </div>
-                        <footer class="post-footer clearfix">
-                            <div class="pull-left tag-list">
-                                <i class="fa fa-folder-open-o"></i>
-                                <!-- <a href="/tag/xin-ban-ben-fa-bu/" id="title"></a> -->
+                        <div id="scr" class="btn" style="width:50%;height:400px;border:1px solid lightblue;overflow-y:auto">  
+                            <div id="con" style="margin:10px 10px">
+
+                                <div class="btn btn-info" style="white-space:normal;float:left;text-align:left">有什么我可以帮忙</div>
+                                <br><br>
+                                <!-- 聊天内容 -->
                             </div>
+                        </div>
+                        
+                       
+                        <footer align="center" class="post-footer clearfix">
+                            <!-- <div class="pull-left tag-list"> -->
+                            <div  class="searchBox col-md-11">
+
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="search" placeholder="输入对话内容"/>
+                                </div>
+
+                            </div>
+                            
+                            <div class="">
+
+                                <button class="btn btn-info" onclick="test()">确定</button>
+
+                            </div>
+                            
                             <div class="pull-right share">
+                            
                             </div>
+
                         </footer>
                     </article>
 
-
-                    
-                    <!-- <nav class="pagination" role="navigation">
-                        <a class="newer-posts" href="/">
-                            <i class="fa fa-angle-left">&lt;</i>
-                        </a>
-                        <span class="page-number">第 1 页 ⁄ 共 2 页</span>
-                        <a class="older-posts" href="./index.html">
-                            <i class="fa fa-angle-right">&gt;</i>
-                        </a>
-                    </nav> -->
                 </div>
     <!-- 右边1 -->
                 <aside class="col-md-3 hidden-sm hidden-xs mainRight">
@@ -149,7 +134,7 @@
                         <div class="content">
                             
                             <p>
-                                <img style="width:50%" src="Public/images/default.jpg" />
+                                <img style="width:50%" src="../Public/images/default.jpg" />
                             </p>
 
                             <p>
@@ -180,11 +165,16 @@
                 </aside>
         </div>
     </section>
-    <script src="./Public/js/jquery.js"></script>
+    <script src="./../Public/js/jquery.js"></script>
   
-    <script src="./Public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./../Public/bootstrap/js/bootstrap.min.js"></script>
 
     <script>
+    var name = 'ding';
+    function xin(obj) { 
+        name = obj;
+    }
+
       $('.noContent').click(function(){
 
           var content = $(this).text();
@@ -201,7 +191,7 @@
         $.ajax({
             type: "get",
             // dataType:"json",
-            url: "php/action.php",
+            url: "../php/action.php",
             data: "id=1",
             success: function(res){
                 //alert(msg);
@@ -213,42 +203,50 @@
             error: function(){ 
                 alert('活该没传值！！！');
             },  
-        });
-        test();     
+        });   
+       // test(); 
     });
-    var num = 0;
-    var msg;
-    function test(){
-        
-        if(num == 0 || num ==15){
+
+    function test() {
+        var info = $('input[type=text]').val();
+        if(!info) {
+            alert('重新输入！');
+        } else {
+            // alert(name);
+            $('input[type=text]').val("");
+            if(info.length > 14) {
+                $('#con').append('<div class="btn btn-success" style="margin:2px auto; white-space:normal;float:right;width:70%;height:auto;text-align:left">'+info+'</div><div style="clear:both"></div>');
+            } else { 
+                $('#con').append('<div class="btn btn-success" style="margin:2px auto;float:right;text-align:left">'+info+'</div><div style="clear:both"></div>');
+            }
+            
             $.ajax({
                 type: "get",
                 // dataType:"json",
-                url: "php/action.php",
-                data: "id=2",
+                url: "../php/rabot.php",
+                data: "name="+name+"&info="+info,
                 success: function(res){
-                    //alert(msg);  
-                    msg = eval('('+res+')');
-                    num = 1;
-                    //修改图片信息
-                    $('#image').html('<img onclick="test()" src="'+msg['data']['article'][1]['img']+'" />');
-                    $('#title').html(msg['data']['article'][1]['title']);
-                    $('#title').attr('href',msg['data']['article'][1]['url']);
-                    //$('#content').html(msg['results'][0]['location']['name']+' : '+msg['results'][0]['daily'][0]['text_day']+' <br> '+msg['results'][0]['daily'][0]['date']);
-                    }, 
+                    //alert(msg);
+                    var msg = eval('('+res+')');
+                    //alert(msg['text']);
+                    if(msg['text'].length > 14){
+                        $('#con').append('<div class="btn btn-info" style="margin:2px auto; white-space:normal;width:60%;height:auto;text-align:left;float:left">'+msg['text']+'</div><div style="clear:both"></div>');
+                    } else {
+                        $('#con').append('<div class="btn btn-info" style="float:left">'+msg['text']+'</div><div style="clear:both"></div>');
+                    }
+                },
+
                 error: function(){ 
                     alert('活该没传值！！！');
                 },  
-            });
-        } else { 
-
-            $('#image').html('<img onclick="test()" src="'+msg['data']['article'][num]['img']+'" />');
-            $('#title').html(msg['data']['article'][num]['title']);
-            $('#title').attr('href',msg['data']['article'][num]['url']);
-        }
-        num = num+1;
+            }); 
+        }   
+        // alert(parseInt($('#scr')[0].offsetHeight));
+        $('#scr').scrollTop($('#scr')[0].scrollHeight);
     }
 
+
+    
     </script>
 </body>
 </html>
