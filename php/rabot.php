@@ -6,9 +6,9 @@
 
     $ch = curl_init();
     if(strstr($name,'ding')) {
-        $url = 'http://apis.baidu.com/turing/turing/turing?key=46ebca1f8a3a4a338e9d05b7d701476a&info='.$info.'&userid=eb2edb736';
+        $url = 'https://apis.baidu.com/turing/turing/turing?key=46ebca1f8a3a4a338e9d05b7d701476a&info='.$info.'&userid=eb2edb736';
     } else { 
-        $url = 'http://apis.baidu.com/turing/turing/turing?key=e90aebfab247483a8b34f0610e3bf382&info='.$info.'&userid=eb2edb736';
+        $url = 'https://apis.baidu.com/turing/turing/turing?key=e90aebfab247483a8b34f0610e3bf382&info='.$info.'&userid=eb2edb736';
     }
     
     $header = array(
