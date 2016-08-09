@@ -193,9 +193,9 @@
             dataType:"json",
             url: "../php/action.php",
             data: "id=1",
-            success: function(res){
+            success: function(msg){
                 //alert(msg);
-                var msg = eval('('+res+')');
+                //var msg = eval('('+res+')');
                 //alert(msg);
                 $('#content').html(msg['results'][0]['location']['name']+' : '+msg['results'][0]['daily'][0]['text_day']+' <br> '+msg['results'][0]['daily'][0]['date']);
                 },
@@ -222,12 +222,12 @@
             
             $.ajax({
                 type: "get",
-                // dataType:"json",
+                dataType:"json",
                 url: "../php/rabot.php",
                 data: "name="+name+"&info="+info,
-                success: function(res){
+                success: function(msg){
                     //alert(msg);
-                    var msg = eval('('+res+')');
+                    // var msg = eval('('+res+')');
                     //alert(msg['text']);
                     if(msg['text'].length > 14){
                         $('#con').append('<div class="btn btn-info" style="margin:2px auto; white-space:normal;width:60%;height:auto;text-align:left;float:left">'+msg['text']+'</div><div style="clear:both"></div>');
