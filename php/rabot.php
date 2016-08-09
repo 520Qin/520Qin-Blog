@@ -21,7 +21,7 @@
     curl_setopt($ch , CURLOPT_URL , $url);
     $res = curl_exec($ch);
 
-    print_r($res);
+    echo ($res);
 
     //var_dump(json_decode($res));
 ?>
